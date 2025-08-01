@@ -140,8 +140,12 @@ const BuildKit = () => {
                         }`}
                         onClick={() => handleProductSelect(category, product)}
                       >
-                        <div className="aspect-square bg-muted rounded-lg mb-4 flex items-center justify-center">
-                          <span className="text-muted-foreground text-sm">Product Image</span>
+                        <div className="aspect-square bg-muted rounded-lg mb-4 overflow-hidden">
+                          <img 
+                            src={product.image} 
+                            alt={product.name}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <h4 className="font-semibold text-foreground mb-2">{product.name}</h4>
                         <p className="text-sm text-muted-foreground mb-3">{product.description}</p>

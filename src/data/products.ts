@@ -1,4 +1,27 @@
 import { Product, Kit } from "@/types/product";
+import studyKitHero from "@/assets/study-kit-hero.jpg";
+import skincareKitHero from "@/assets/skincare-kit-hero.jpg";
+import travelKitHero from "@/assets/travel-kit-hero.jpg";
+
+// Product images
+import notebook1 from "@/assets/products/notebook-1.jpg";
+import notebook2 from "@/assets/products/notebook-2.jpg";
+import pen1 from "@/assets/products/pen-1.jpg";
+import pen2 from "@/assets/products/pen-2.jpg";
+import gadget1 from "@/assets/products/gadget-1.jpg";
+import gadget2 from "@/assets/products/gadget-2.jpg";
+import cleanser1 from "@/assets/products/cleanser-1.jpg";
+import cleanser2 from "@/assets/products/cleanser-2.jpg";
+import serum1 from "@/assets/products/serum-1.jpg";
+import serum2 from "@/assets/products/serum-2.jpg";
+import moisturizer1 from "@/assets/products/moisturizer-1.jpg";
+import moisturizer2 from "@/assets/products/moisturizer-2.jpg";
+import toiletries1 from "@/assets/products/toiletries-1.jpg";
+import toiletries2 from "@/assets/products/toiletries-2.jpg";
+import accessories1 from "@/assets/products/accessories-1.jpg";
+import accessories2 from "@/assets/products/accessories-2.jpg";
+import organization1 from "@/assets/products/organization-1.jpg";
+import organization2 from "@/assets/products/organization-2.jpg";
 
 export const kits: Kit[] = [
   {
@@ -6,7 +29,7 @@ export const kits: Kit[] = [
     name: "Study Kit",
     description: "Essential tools for productive learning and note-taking",
     categories: ["notebook", "pen", "gadget"],
-    image: "/api/placeholder/400/300",
+    image: studyKitHero,
     color: "bg-blue-50 border-blue-200"
   },
   {
@@ -14,7 +37,7 @@ export const kits: Kit[] = [
     name: "Skincare Kit", 
     description: "Complete skincare routine for healthy, glowing skin",
     categories: ["cleanser", "serum", "moisturizer"],
-    image: "/api/placeholder/400/300",
+    image: skincareKitHero,
     color: "bg-pink-50 border-pink-200"
   },
   {
@@ -22,7 +45,7 @@ export const kits: Kit[] = [
     name: "Travel Kit",
     description: "Compact essentials for your next adventure",
     categories: ["toiletries", "accessories", "organization"],
-    image: "/api/placeholder/400/300", 
+    image: travelKitHero, 
     color: "bg-green-50 border-green-200"
   }
 ];
@@ -34,7 +57,7 @@ export const products: Product[] = [
     name: "Premium Dotted Notebook",
     description: "High-quality paper with dot grid layout",
     price: 15.99,
-    image: "/api/placeholder/200/200",
+    image: notebook1,
     category: "notebook"
   },
   {
@@ -42,7 +65,7 @@ export const products: Product[] = [
     name: "Minimalist Lined Journal",
     description: "Clean design with premium lined pages",
     price: 12.99,
-    image: "/api/placeholder/200/200",
+    image: notebook2,
     category: "notebook"
   },
   {
@@ -50,7 +73,7 @@ export const products: Product[] = [
     name: "Smooth Gel Pen Set",
     description: "Set of 3 premium gel pens in black, blue, red",
     price: 8.99,
-    image: "/api/placeholder/200/200", 
+    image: pen1, 
     category: "pen"
   },
   {
@@ -58,7 +81,7 @@ export const products: Product[] = [
     name: "Mechanical Pencil Pro",
     description: "Professional 0.5mm mechanical pencil",
     price: 6.99,
-    image: "/api/placeholder/200/200",
+    image: pen2,
     category: "pen"
   },
   {
@@ -66,7 +89,7 @@ export const products: Product[] = [
     name: "Digital Note Organizer",
     description: "Smart device for digital note organization",
     price: 49.99,
-    image: "/api/placeholder/200/200",
+    image: gadget1,
     category: "gadget"
   },
   {
@@ -74,7 +97,7 @@ export const products: Product[] = [
     name: "Wireless Charging Pad",
     description: "Fast wireless charging for your devices",
     price: 24.99,
-    image: "/api/placeholder/200/200",
+    image: gadget2,
     category: "gadget"
   },
 
@@ -84,7 +107,7 @@ export const products: Product[] = [
     name: "Gentle Foam Cleanser",
     description: "Mild foaming cleanser for all skin types",
     price: 18.99,
-    image: "/api/placeholder/200/200",
+    image: cleanser1,
     category: "cleanser"
   },
   {
@@ -92,7 +115,7 @@ export const products: Product[] = [
     name: "Hydrating Cream Cleanser", 
     description: "Rich cream cleanser for dry skin",
     price: 22.99,
-    image: "/api/placeholder/200/200",
+    image: cleanser2,
     category: "cleanser"
   },
   {
@@ -100,7 +123,7 @@ export const products: Product[] = [
     name: "Vitamin C Brightening Serum",
     description: "Antioxidant serum for radiant skin",
     price: 34.99,
-    image: "/api/placeholder/200/200",
+    image: serum1,
     category: "serum"
   },
   {
@@ -108,7 +131,7 @@ export const products: Product[] = [
     name: "Hyaluronic Acid Serum",
     description: "Deep hydration and plumping serum",
     price: 28.99,
-    image: "/api/placeholder/200/200",
+    image: serum2,
     category: "serum"
   },
   {
@@ -116,7 +139,7 @@ export const products: Product[] = [
     name: "Daily Hydrating Cream",
     description: "Lightweight daily moisturizer",
     price: 26.99,
-    image: "/api/placeholder/200/200",
+    image: moisturizer1,
     category: "moisturizer"
   },
   {
@@ -124,7 +147,7 @@ export const products: Product[] = [
     name: "Night Repair Cream",
     description: "Rich overnight moisturizer",
     price: 32.99,
-    image: "/api/placeholder/200/200", 
+    image: moisturizer2, 
     category: "moisturizer"
   },
 
@@ -134,7 +157,7 @@ export const products: Product[] = [
     name: "Travel Toiletry Set",
     description: "Compact shampoo, conditioner, and body wash",
     price: 16.99,
-    image: "/api/placeholder/200/200",
+    image: toiletries1,
     category: "toiletries"
   },
   {
@@ -142,7 +165,7 @@ export const products: Product[] = [
     name: "TSA-Approved Bottles",
     description: "Set of leak-proof travel containers",
     price: 12.99,
-    image: "/api/placeholder/200/200",
+    image: toiletries2,
     category: "toiletries"
   },
   {
@@ -150,7 +173,7 @@ export const products: Product[] = [
     name: "Travel Adapter Kit",
     description: "Universal travel adapter with USB ports",
     price: 29.99,
-    image: "/api/placeholder/200/200",
+    image: accessories1,
     category: "accessories"
   },
   {
@@ -158,7 +181,7 @@ export const products: Product[] = [
     name: "Portable Phone Stand",
     description: "Foldable phone stand for travel",
     price: 14.99,
-    image: "/api/placeholder/200/200",
+    image: accessories2,
     category: "accessories"
   },
   {
@@ -166,7 +189,7 @@ export const products: Product[] = [
     name: "Packing Cubes Set",
     description: "Set of 3 compression packing cubes",
     price: 24.99,
-    image: "/api/placeholder/200/200",
+    image: organization1,
     category: "organization"
   },
   {
@@ -174,7 +197,7 @@ export const products: Product[] = [
     name: "Travel Document Organizer",
     description: "RFID-blocking passport and document wallet", 
     price: 19.99,
-    image: "/api/placeholder/200/200",
+    image: organization2,
     category: "organization"
   }
 ];
