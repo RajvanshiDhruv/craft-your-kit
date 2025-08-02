@@ -56,7 +56,7 @@ export const products: Product[] = [
     id: "notebook-1",
     name: "Premium Dotted Notebook",
     description: "High-quality paper with dot grid layout",
-    price: 15.99,
+    price: 1299,
     image: notebook1,
     category: "notebook"
   },
@@ -64,7 +64,7 @@ export const products: Product[] = [
     id: "notebook-2", 
     name: "Minimalist Lined Journal",
     description: "Clean design with premium lined pages",
-    price: 12.99,
+    price: 999,
     image: notebook2,
     category: "notebook"
   },
@@ -72,7 +72,7 @@ export const products: Product[] = [
     id: "pen-1",
     name: "Smooth Gel Pen Set",
     description: "Set of 3 premium gel pens in black, blue, red",
-    price: 8.99,
+    price: 699,
     image: pen1, 
     category: "pen"
   },
@@ -80,7 +80,7 @@ export const products: Product[] = [
     id: "pen-2",
     name: "Mechanical Pencil Pro",
     description: "Professional 0.5mm mechanical pencil",
-    price: 6.99,
+    price: 599,
     image: pen2,
     category: "pen"
   },
@@ -88,7 +88,7 @@ export const products: Product[] = [
     id: "gadget-1",
     name: "Digital Note Organizer",
     description: "Smart device for digital note organization",
-    price: 49.99,
+    price: 3999,
     image: gadget1,
     category: "gadget"
   },
@@ -96,7 +96,7 @@ export const products: Product[] = [
     id: "gadget-2",
     name: "Wireless Charging Pad",
     description: "Fast wireless charging for your devices",
-    price: 24.99,
+    price: 1999,
     image: gadget2,
     category: "gadget"
   },
@@ -106,7 +106,7 @@ export const products: Product[] = [
     id: "cleanser-1",
     name: "Gentle Foam Cleanser",
     description: "Mild foaming cleanser for all skin types",
-    price: 18.99,
+    price: 1499,
     image: cleanser1,
     category: "cleanser"
   },
@@ -114,7 +114,7 @@ export const products: Product[] = [
     id: "cleanser-2",
     name: "Hydrating Cream Cleanser", 
     description: "Rich cream cleanser for dry skin",
-    price: 22.99,
+    price: 1899,
     image: cleanser2,
     category: "cleanser"
   },
@@ -122,7 +122,7 @@ export const products: Product[] = [
     id: "serum-1",
     name: "Vitamin C Brightening Serum",
     description: "Antioxidant serum for radiant skin",
-    price: 34.99,
+    price: 2899,
     image: serum1,
     category: "serum"
   },
@@ -130,7 +130,7 @@ export const products: Product[] = [
     id: "serum-2",
     name: "Hyaluronic Acid Serum",
     description: "Deep hydration and plumping serum",
-    price: 28.99,
+    price: 2399,
     image: serum2,
     category: "serum"
   },
@@ -138,7 +138,7 @@ export const products: Product[] = [
     id: "moisturizer-1",
     name: "Daily Hydrating Cream",
     description: "Lightweight daily moisturizer",
-    price: 26.99,
+    price: 2199,
     image: moisturizer1,
     category: "moisturizer"
   },
@@ -146,7 +146,7 @@ export const products: Product[] = [
     id: "moisturizer-2",
     name: "Night Repair Cream",
     description: "Rich overnight moisturizer",
-    price: 32.99,
+    price: 2699,
     image: moisturizer2, 
     category: "moisturizer"
   },
@@ -156,7 +156,7 @@ export const products: Product[] = [
     id: "toiletries-1",
     name: "Travel Toiletry Set",
     description: "Compact shampoo, conditioner, and body wash",
-    price: 16.99,
+    price: 1399,
     image: toiletries1,
     category: "toiletries"
   },
@@ -164,7 +164,7 @@ export const products: Product[] = [
     id: "toiletries-2", 
     name: "TSA-Approved Bottles",
     description: "Set of leak-proof travel containers",
-    price: 12.99,
+    price: 999,
     image: toiletries2,
     category: "toiletries"
   },
@@ -172,7 +172,7 @@ export const products: Product[] = [
     id: "accessories-1",
     name: "Travel Adapter Kit",
     description: "Universal travel adapter with USB ports",
-    price: 29.99,
+    price: 2399,
     image: accessories1,
     category: "accessories"
   },
@@ -180,7 +180,7 @@ export const products: Product[] = [
     id: "accessories-2",
     name: "Portable Phone Stand",
     description: "Foldable phone stand for travel",
-    price: 14.99,
+    price: 1199,
     image: accessories2,
     category: "accessories"
   },
@@ -188,7 +188,7 @@ export const products: Product[] = [
     id: "organization-1",
     name: "Packing Cubes Set",
     description: "Set of 3 compression packing cubes",
-    price: 24.99,
+    price: 1999,
     image: organization1,
     category: "organization"
   },
@@ -196,7 +196,7 @@ export const products: Product[] = [
     id: "organization-2",
     name: "Travel Document Organizer",
     description: "RFID-blocking passport and document wallet", 
-    price: 19.99,
+    price: 1599,
     image: organization2,
     category: "organization"
   }

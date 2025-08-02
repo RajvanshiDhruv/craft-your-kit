@@ -1,11 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
-import { ShoppingCart, Menu } from "lucide-react";
+import { ShoppingCart, Menu, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/contexts/CartContext";
+import { useTheme } from "@/components/ThemeProvider";
 import { useState } from "react";
 
 const Header = () => {
   const { getTotalItems } = useCart();
+  const { theme, setTheme } = useTheme();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -49,8 +51,19 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Cart and Mobile Menu */}
+          {/* Theme Toggle, Cart and Mobile Menu */}
           <div className="flex items-center space-x-4">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              className="hidden md:flex"
+            >
+              <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
+            
             <Link to="/cart">
               <Button variant="outline" size="sm" className="relative">
                 <ShoppingCart className="h-4 w-4" />
@@ -92,6 +105,16 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+                className="mt-4 w-full justify-start"
+              >
+                <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 mr-2" />
+                <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 mr-2" />
+                Toggle Theme
+              </Button>
             </nav>
           </div>
         )}

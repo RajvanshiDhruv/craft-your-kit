@@ -34,10 +34,19 @@ const BuildKit = () => {
   };
 
   const handleProductSelect = (category: string, product: Product) => {
-    setSelectedProducts(prev => ({
-      ...prev,
-      [category]: product
-    }));
+    setSelectedProducts(prev => {
+      // If the same product is clicked again, deselect it
+      if (prev[category]?.id === product.id) {
+        const newState = { ...prev };
+        delete newState[category];
+        return newState;
+      }
+      // Otherwise, select the new product
+      return {
+        ...prev,
+        [category]: product
+      };
+    });
   };
 
   const getProgress = () => {
@@ -50,8 +59,8 @@ const BuildKit = () => {
     return Object.values(selectedProducts).reduce((total, product) => total + product.price, 0);
   };
 
-  const isKitComplete = () => {
-    return currentKit ? Object.keys(selectedProducts).length === currentKit.categories.length : false;
+  const hasSelectedProducts = () => {
+    return Object.keys(selectedProducts).length > 0;
   };
 
   const handleAddToCart = () => {
@@ -107,8 +116,8 @@ const BuildKit = () => {
             <h2 className="text-2xl font-semibold text-foreground">
               Kit Progress ({Object.keys(selectedProducts).length}/{currentKit?.categories.length || 0})
             </h2>
-            <Badge variant={isKitComplete() ? "default" : "secondary"}>
-              {isKitComplete() ? "Complete" : "In Progress"}
+            <Badge variant={hasSelectedProducts() ? "default" : "secondary"}>
+              {hasSelectedProducts() ? "In Progress" : "Start Building"}
             </Badge>
           </div>
           <Progress value={getProgress()} className="h-3" />
@@ -149,7 +158,7 @@ const BuildKit = () => {
                         </div>
                         <h4 className="font-semibold text-foreground mb-2">{product.name}</h4>
                         <p className="text-sm text-muted-foreground mb-3">{product.description}</p>
-                        <div className="font-bold text-primary">${product.price.toFixed(2)}</div>
+                        <div className="font-bold text-primary">₹{product.price}</div>
                       </Card>
                     ))}
                   </div>
@@ -173,7 +182,7 @@ const BuildKit = () => {
                           {selectedProducts[category].name}
                         </div>
                         <div className="text-primary font-bold">
-                          ${selectedProducts[category].price.toFixed(2)}
+                          ₹{selectedProducts[category].price}
                         </div>
                       </div>
                     ) : (
@@ -186,13 +195,13 @@ const BuildKit = () => {
               <div className="border-t border-border pt-4 mb-6">
                 <div className="flex items-center justify-between text-lg font-bold">
                   <span>Total</span>
-                  <span className="text-primary">${getTotalPrice().toFixed(2)}</span>
+                  <span className="text-primary">₹{getTotalPrice()}</span>
                 </div>
               </div>
 
               <Button
                 onClick={handleAddToCart}
-                disabled={!isKitComplete()}
+                disabled={!hasSelectedProducts()}
                 className="w-full"
                 size="lg"
               >
@@ -200,9 +209,9 @@ const BuildKit = () => {
                 Add Kit to Cart
               </Button>
 
-              {!isKitComplete() && (
+              {!hasSelectedProducts() && (
                 <p className="text-sm text-muted-foreground text-center mt-3">
-                  Select all products to add kit to cart
+                  Select at least one product to add to cart
                 </p>
               )}
             </Card>

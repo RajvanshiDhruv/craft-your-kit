@@ -56,7 +56,7 @@ const Cart = () => {
                       <h3 className="font-semibold text-foreground mb-1">{item.product.name}</h3>
                       <p className="text-sm text-muted-foreground mb-2">{item.product.description}</p>
                       <div className="text-lg font-bold text-primary">
-                        ${item.product.price.toFixed(2)}
+                        ₹{item.product.price}
                       </div>
                     </div>
 
@@ -111,7 +111,7 @@ const Cart = () => {
                       <div className="text-muted-foreground text-xs">Qty: {item.quantity}</div>
                     </div>
                     <div className="text-primary font-bold">
-                      ${(item.product.price * item.quantity).toFixed(2)}
+                      ₹{item.product.price * item.quantity}
                     </div>
                   </div>
                 ))}
@@ -120,7 +120,7 @@ const Cart = () => {
               <div className="border-t border-border pt-4 mb-6">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-muted-foreground">Subtotal</span>
-                  <span className="font-medium">${getTotalPrice().toFixed(2)}</span>
+                  <span className="font-medium">₹{getTotalPrice()}</span>
                 </div>
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-muted-foreground">Shipping</span>
@@ -128,7 +128,7 @@ const Cart = () => {
                 </div>
                 <div className="flex justify-between items-center text-lg font-bold border-t border-border pt-2">
                   <span>Total</span>
-                  <span className="text-primary">${getTotalPrice().toFixed(2)}</span>
+                  <span className="text-primary">₹{getTotalPrice()}</span>
                 </div>
               </div>
 
