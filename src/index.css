@@ -29,7 +29,7 @@
 
     /* Muted Colors */
     --muted: 210 15% 95%;
-    --muted-foreground: 215 15% 55%;
+    --muted-foreground: 215 25% 40%;
 
     /* Accent Colors */
     --accent: 210 50% 93%;
@@ -91,7 +91,7 @@
     --secondary-foreground: 210 15% 85%;
 
     --muted: 225 15% 12%;
-    --muted-foreground: 215 15% 65%;
+    --muted-foreground: 215 15% 75%;
 
     --accent: 210 50% 15%;
     --accent-foreground: 210 70% 70%;
