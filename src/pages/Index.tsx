@@ -24,7 +24,7 @@ const Index = () => {
             <div>
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Build Your Perfect{" "}
-                <span className="text-primary">Product Kit</span>
+                <span className="bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent font-bold">Product Kit</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Create customized bundles tailored to your lifestyle. Whether it's study essentials, 
